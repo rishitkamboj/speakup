@@ -1,4 +1,5 @@
 import { Hono } from 'hono';
+import { cors } from 'hono/cors'
 import { PrismaClient } from '@prisma/client/edge';
 import { withAccelerate } from '@prisma/extension-accelerate';
 import {sign,verify} from 'hono/jwt';
@@ -13,7 +14,7 @@ export const userRouter = new Hono<{
 }>();
 
 
-
+userRouter.use('/*', cors());
 
 userRouter.post('/signup', async (c) => {
      const prisma = new PrismaClient({
@@ -31,6 +32,7 @@ userRouter.post('/signup', async (c) => {
        data :{
          email: body.email,
          password: body.password,
+         name:body.name
        }
      });
      const jwt=await sign({id:u.id},c.env.JWT_SECRET);
