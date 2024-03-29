@@ -7,8 +7,8 @@ backend/prisma/schema.prisma
 backend/tsconfig.json
 common
 backend/prisma/migrations/20240326090511_init_schema/migration.sql
-frontend/package-lock.json
-frontend/package.json
+
+
 # Logs
 logs
 *.log
