@@ -1,10 +1,13 @@
+import { Link } from "react-router-dom";
 
 
-export const Blogcard = ({authorName,
+export const Blogcard = ({
+     id,
+     authorName,
 title,
 content,
 publishedDate}:BlogcardType)=>{
-     return         <div className="p-4 border-b border-slate-200 pb-4 w-screen max-w-screen-md cursor-pointer blog-font ">
+     return      <Link to={`/blog/${id}`}> <div className="p-4 border-b border-slate-200 pb-4 w-screen max-w-screen-md cursor-pointer blog-font ">
      <div className="flex">
          <Avatar name={authorName} />
          <div className="font-extralight pl-2 text-sm flex justify-center flex-col">{authorName}</div>
@@ -25,12 +28,13 @@ publishedDate}:BlogcardType)=>{
          {`${Math.ceil(content.length / 100)} minute(s) read`}
      </div>
  </div>
-
+ </Link> 
 }
 
 
 
 interface BlogcardType{
+     id:number;
      authorName:string;
      title:string;
      content:string;
