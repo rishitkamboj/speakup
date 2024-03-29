@@ -36,6 +36,8 @@ export const Cred = ({type}:{type:"signup" | "signin"}) => {
 </div>
      </div>
      <div className="pt-6">
+          
+         
 <LabelledInput label="Username" placeholder="Enter your username" onChange={(e) => setPostInputs({ ...postInputs, name: e.target.value })} />
 <LabelledInput label="Email" placeholder="a@example.com" onChange={(e) => setPostInputs({ ...postInputs, email: e.target.value })} />
 <LabelledInput label="Password" type="password" placeholder="" onChange={(e) => setPostInputs({ ...postInputs, password: e.target.value })} />
