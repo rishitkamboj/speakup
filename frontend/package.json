@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@100xdevs/medium-common": "^1.0.0",
     "@rishitkamboj/common-zod": "^1.0.0",
+    "@rishitkamboj/custom-library-zod": "^1.0.0",
+    "@rishitkamboj/customlibraryzod": "^1.0.0",
+    "@rishitkamboj/zod-common": "^1.0.0",
     "axios": "^1.6.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

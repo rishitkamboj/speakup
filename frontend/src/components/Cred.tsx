@@ -1,13 +1,12 @@
 import { ChangeEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom"
-import {SignupType} from "@rishitkamboj/common-zod";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
 
 
 export const Cred = ({type}:{type:"signup" | "signin"}) => {
      const navigate = useNavigate();
-     const [postInputs, setPostInputs] = useState<SignupType>({
+     const [postInputs, setPostInputs] = useState({
           name: "",
           email: "",
           password: ""
