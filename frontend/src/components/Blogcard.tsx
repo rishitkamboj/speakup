@@ -18,9 +18,9 @@ publishedDate}:BlogcardType)=>{
              {publishedDate}
          </div>
      </div>
-     <div className="text-xl font-bold pt-2">
-         {title}
-     </div>
+    <div className="text-xl font-bold pt-2">
+        {title.length > 50 ? title.slice(0, 50) + "..." : title}
+    </div>
      <div className="text-md font-semibold">
          {content.slice(0, 100) + "..."}
      </div>
