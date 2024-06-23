@@ -4,6 +4,7 @@ import { Signin } from './pages/Signin'
 import { Blog } from './pages/Blog'
 import {Blogs} from './pages/Blogs'
 import { Publish } from './pages/Publish'
+import AuthRoute from './components/AuthRoute'
 
 function App() {
 
@@ -14,9 +15,9 @@ function App() {
         <Route path="/" element={<Signup />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
-          <Route path="/blog/:id" element={<Blog />} />
-          <Route path="/blogs" element={<Blogs />} />
-          <Route path="/publish" element={<Publish />} />
+          <Route path="/blog/:id" element={<AuthRoute><Blog /></AuthRoute>} />
+          <Route path="/blogs" element={<AuthRoute><Blogs /></AuthRoute>} />
+          <Route path="/publish" element={<AuthRoute><Publish /></AuthRoute>} />
           
         </Routes>
       </BrowserRouter>
