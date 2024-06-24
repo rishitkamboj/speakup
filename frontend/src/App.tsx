@@ -17,7 +17,7 @@ function App() {
           <Route path="/signin" element={<Signin />} />
           <Route path="/blog/:id" element={<AuthRoute><Blog /></AuthRoute>} />
           <Route path="/blogs" element={<AuthRoute><Blogs /></AuthRoute>} />
-          <Route path="/publish" element={<AuthRoute><Publish /></AuthRoute>} />
+          <Route path="/publish" element={<Publish />} />
           
         </Routes>
       </BrowserRouter>
